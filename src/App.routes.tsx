@@ -13,6 +13,8 @@ import Feedback from "./pages/Feedback";
 import Integration from "./pages/Integration";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -28,6 +30,8 @@ const AppRoutes: React.FC = () => {
       <Route path="/feedback" element={<Feedback />} />
       <Route path="/integration" element={<Integration />} />
       <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/terms" element={<TermsOfService />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

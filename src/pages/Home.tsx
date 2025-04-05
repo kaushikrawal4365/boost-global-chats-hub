@@ -178,10 +178,20 @@ const Home: React.FC = () => {
               </Button>
             </Link>
             <Link to="/integration">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-white/20">
                 Learn About Integration
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer links */}
+      <section className="py-6 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+            <Link to="/terms" className="hover:text-primary hover:underline">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-primary hover:underline">Privacy Policy</Link>
           </div>
         </div>
       </section>
