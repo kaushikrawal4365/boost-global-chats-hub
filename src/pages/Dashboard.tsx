@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
-import { Settings, MessageSquare, Bot, Key, Plus, ArrowRight, Loader2 } from "lucide-react";
+import { Settings, MessageSquare, Bot, Key, Plus, ArrowRight, Loader2, ShieldAlert } from "lucide-react";
 import { toast } from "sonner";
 
 // Mock chatbot data
@@ -91,9 +91,21 @@ const Dashboard: React.FC = () => {
           <h1 className="text-3xl font-bold">Dashboard</h1>
           <p className="text-gray-500">Welcome back, {user.name}</p>
         </div>
-        <Button variant="outline" onClick={logout} className="mt-4 md:mt-0">
-          Logout
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-2 mt-4 md:mt-0">
+          {user.isAdmin && (
+            <Button 
+              variant="destructive" 
+              onClick={() => navigate("/admin")}
+              className="flex items-center gap-2"
+            >
+              <ShieldAlert className="h-4 w-4" />
+              Admin Dashboard
+            </Button>
+          )}
+          <Button variant="outline" onClick={logout}>
+            Logout
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

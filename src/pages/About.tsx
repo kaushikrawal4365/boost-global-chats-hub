@@ -65,67 +65,22 @@ const About: React.FC = () => {
             <h2 className="text-3xl font-bold ml-4">{t("about.team.title")}</h2>
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet the passionate people behind ChatBoost who are dedicated to making advanced AI chatbots accessible to everyone.
+            Meet the passionate person behind ChatBoost who is dedicated to making advanced AI chatbots accessible to everyone.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {/* Founder */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="flex justify-center">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm">
             <div className="h-48 bg-gray-200 flex items-center justify-center">
               <svg className="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
             <div className="p-6">
-              <h3 className="font-bold text-lg mb-1">CEO & Founder</h3>
+              <h3 className="font-bold text-lg mb-1">Kaushik Rawal</h3>
+              <p className="text-gray-600 text-sm mb-3 font-medium">Founder & CEO</p>
               <p className="text-gray-600 text-sm mb-3">
-                A tech entrepreneur with a passion for making AI accessible to everyone. With over 15 years of experience in software development and artificial intelligence.
-              </p>
-            </div>
-          </div>
-
-          {/* CTO */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <svg className="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="font-bold text-lg mb-1">CTO</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Leads our engineering team with expertise in machine learning and natural language processing. Previously worked at leading AI research labs.
-              </p>
-            </div>
-          </div>
-
-          {/* Head of Product */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <svg className="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="font-bold text-lg mb-1">Head of Product</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Oversees product development with a focus on user experience and accessibility. Has helped scale multiple SaaS products to millions of users.
-              </p>
-            </div>
-          </div>
-
-          {/* Head of Customer Success */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <svg className="h-24 w-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="font-bold text-lg mb-1">Head of Customer Success</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Ensures our customers get the most out of ChatBoost. With a background in education and customer support, dedicated to helping users succeed.
+                A tech entrepreneur with a passion for making AI accessible to everyone. With extensive experience in software development and artificial intelligence.
               </p>
             </div>
           </div>

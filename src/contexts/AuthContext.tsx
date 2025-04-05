@@ -10,6 +10,7 @@ export interface User {
   plan: "free" | "individual" | "group" | "lifetime";
   messagesUsed: number;
   messageLimit: number;
+  isAdmin?: boolean;
 }
 
 // Define the AuthContext type
@@ -54,6 +55,16 @@ const mockUsers = [
     messagesUsed: 8,
     messageLimit: 15,
   },
+  {
+    id: "3",
+    name: "Kaushik Rawal",
+    email: "kaushikrawal4365@gmail.com",
+    password: "SecureUnhackablePassword123!", // In a real app, this would be hashed
+    plan: "lifetime" as const,
+    messagesUsed: 0,
+    messageLimit: Infinity,
+    isAdmin: true
+  }
 ];
 
 // Create the AuthProvider component
