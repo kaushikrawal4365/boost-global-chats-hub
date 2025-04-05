@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
 
-## Project info
+# ChatBoost - AI-Powered Chatbot Platform
 
-**URL**: https://lovable.dev/projects/8227cd6c-e21d-4eb3-8017-545c1f6c46e2
+ChatBoost is a comprehensive platform for accessing and integrating 50+ AI-powered chatbots for motivation, productivity, learning, customer support, and more.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Access to 50+ specialized AI chatbots
+- Multi-language support (English, Spanish, French)
+- User authentication system
+- Dashboard for interacting with chatbots
+- Subscription plans with different tiers
+- API integration for developers
+- Embeddable chat widgets for websites
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8227cd6c-e21d-4eb3-8017-545c1f6c46e2) and start prompting.
+### Frontend
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- React Router for navigation
+- React Query for data fetching
+- i18n for internationalization
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend (Placeholder)
+- Node.js with Express (mock implementation provided)
+- RESTful API design
+- JWT authentication
+- PostgreSQL database schema (SQL included in comments)
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js 16+ and npm
 
-Follow these steps:
+### Installation
 
+1. Clone the repository
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <repository-url>
+cd chatboost
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+chatboost/
+├── public/            # Static assets
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── contexts/      # React contexts for state management
+│   ├── lib/           # Utility functions and API client
+│   ├── pages/         # Page components
+│   ├── App.tsx        # Main application component
+│   ├── index.css      # Global styles
+│   └── main.tsx       # Application entry point
+├── package.json       # Project dependencies
+├── tailwind.config.ts # Tailwind CSS configuration
+└── README.md          # Project documentation
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Authentication
 
-## What technologies are used for this project?
+The application includes a complete authentication flow:
+- Sign up
+- Login
+- Password recovery
+- JWT token-based authentication
 
-This project is built with:
+For demo purposes, you can use these credentials:
+- Email: demo@example.com
+- Password: password
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## API Usage
 
-## How can I deploy this project?
+The project includes a mock API client (`src/lib/api-mock.ts`) and a mock backend implementation (`src/lib/backend-mock.js`) to demonstrate how to integrate with a real backend.
 
-Simply open [Lovable](https://lovable.dev/projects/8227cd6c-e21d-4eb3-8017-545c1f6c46e2) and click on Share -> Publish.
+### Example API Request:
 
-## Can I connect a custom domain to my Lovable project?
+```typescript
+// Send a message to a chatbot
+const response = await fetch('https://api.chatboost.ai/v1/chat', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY'
+  },
+  body: JSON.stringify({
+    botId: 'productivity',
+    message: 'How can I improve my focus?'
+  })
+});
+```
 
-Yes it is!
+## Internationalization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The application supports multiple languages with a simple language switcher. Translations are stored in the LanguageContext component.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Integration Options
+
+ChatBoost offers multiple integration options for developers:
+- RESTful API
+- JavaScript SDK
+- Embeddable widget
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [React Router](https://reactrouter.com/) for routing
+- [React Query](https://tanstack.com/query) for data fetching
